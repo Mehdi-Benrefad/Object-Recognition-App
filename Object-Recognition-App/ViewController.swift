@@ -14,7 +14,7 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate , UINav
     @IBOutlet weak var imageSelect: UIImageView!
     @IBOutlet weak var shoeLabel: UILabel!
     let imagePicker = UIImagePickerController()
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         //definir le viewController en tant que delegate de l'image picker
