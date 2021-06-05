@@ -15,13 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qF8-nh-AUU">
-                                <rect key="frame" x="20" y="74" width="374" height="410"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="83n-LX-rLY"/>
-                                    <constraint firstAttribute="height" constant="410" id="KX2-Jh-iHT"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsT-DP-vNG">
                                 <rect key="frame" x="20" y="558" width="374" height="87"/>
                                 <constraints>
@@ -32,6 +25,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qF8-nh-AUU">
+                                <rect key="frame" x="20" y="74" width="374" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="83n-LX-rLY"/>
+                                    <constraint firstAttribute="height" constant="410" id="KX2-Jh-iHT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -46,8 +46,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="avx-Np-Vvz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="p7w-Wf-MNu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="p7w-Wf-MNu">
+                            <connections>
+                                <action selector="cameraBTN:" destination="BYZ-38-t0r" id="G7s-FO-05H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageSelect" destination="qF8-nh-AUU" id="AEJ-pC-cnA"/>
+                        <outlet property="shoeLabel" destination="jsT-DP-vNG" id="llX-9Q-3e9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
