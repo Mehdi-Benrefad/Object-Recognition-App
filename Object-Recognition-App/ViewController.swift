@@ -75,6 +75,7 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate , UINav
     }
     
     @IBAction func cameraBTN(_ sender: UIBarButtonItem) {
+        imagePicker.modalPresentationStyle = .fullScreen
         present(imagePicker,animated: true,completion: nil)
     }
     
