@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2A692A266BBA0300782209 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2A6929266BBA0300782209 /* ViewController2.swift */; };
+		4F2A692C266BBF0400782209 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F2A692B266BBF0400782209 /* MobileNetV2.mlmodel */; };
+		4F2A692E266BCB4100782209 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2A692D266BCB4100782209 /* HomeViewController.swift */; };
 		4FBB4EDB266B15BB000686F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB4EDA266B15BB000686F3 /* AppDelegate.swift */; };
 		4FBB4EDD266B15BB000686F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB4EDC266B15BB000686F3 /* SceneDelegate.swift */; };
 		4FBB4EDF266B15BB000686F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBB4EDE266B15BB000686F3 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F2A6929266BBA0300782209 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		4F2A692B266BBF0400782209 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		4F2A692D266BCB4100782209 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4FBB4ED7266B15BB000686F3 /* Object-Recognition-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object-Recognition-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBB4EDA266B15BB000686F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FBB4EDC266B15BB000686F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2A6926266BB97100782209 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F2A692B266BBF0400782209 /* MobileNetV2.mlmodel */,
+				4FBB4EF5266B2ABD000686F3 /* Inceptionv3.mlmodel */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4F2A6927266BB97D00782209 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FBB4EE0266B15BB000686F3 /* Main.storyboard */,
+				4FBB4EE8266B15C4000686F3 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4F2A6928266BB98700782209 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FBB4EDE266B15BB000686F3 /* ViewController.swift */,
+				4F2A6929266BBA0300782209 /* ViewController2.swift */,
+				4F2A692D266BCB4100782209 /* HomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		4FBB4ECE266B15BB000686F3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +94,12 @@
 		4FBB4ED9266B15BB000686F3 /* Object-Recognition-App */ = {
 			isa = PBXGroup;
 			children = (
-				4FBB4EF5266B2ABD000686F3 /* Inceptionv3.mlmodel */,
 				4FBB4EDA266B15BB000686F3 /* AppDelegate.swift */,
 				4FBB4EDC266B15BB000686F3 /* SceneDelegate.swift */,
-				4FBB4EDE266B15BB000686F3 /* ViewController.swift */,
-				4FBB4EE0266B15BB000686F3 /* Main.storyboard */,
+				4F2A6926266BB97100782209 /* Model */,
+				4F2A6927266BB97D00782209 /* View */,
+				4F2A6928266BB98700782209 /* Controller */,
 				4FBB4EE6266B15C4000686F3 /* Assets.xcassets */,
-				4FBB4EE8266B15C4000686F3 /* LaunchScreen.storyboard */,
 				4FBB4EEB266B15C4000686F3 /* Info.plist */,
 				4FBB4EE3266B15BB000686F3 /* Object_Recognition_App.xcdatamodeld */,
 			);
@@ -144,11 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2A692C266BBF0400782209 /* MobileNetV2.mlmodel in Sources */,
 				4FBB4EF6266B2ABD000686F3 /* Inceptionv3.mlmodel in Sources */,
 				4FBB4EDF266B15BB000686F3 /* ViewController.swift in Sources */,
+				4F2A692E266BCB4100782209 /* HomeViewController.swift in Sources */,
 				4FBB4EDB266B15BB000686F3 /* AppDelegate.swift in Sources */,
 				4FBB4EE5266B15BB000686F3 /* Object_Recognition_App.xcdatamodeld in Sources */,
 				4FBB4EDD266B15BB000686F3 /* SceneDelegate.swift in Sources */,
+				4F2A692A266BBA0300782209 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

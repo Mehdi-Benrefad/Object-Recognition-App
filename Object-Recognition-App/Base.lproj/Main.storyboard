@@ -46,6 +46,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="avx-Np-Vvz">
+                        <barButtonItem key="leftBarButtonItem" title="X" image="xmark" catalog="system" id="Akg-xj-KyX">
+                            <connections>
+                                <segue destination="4hO-KU-jDa" kind="unwind" unwindAction="unwindBookToWelcomeWithSegue:" id="lbG-s8-lTS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="p7w-Wf-MNu">
                             <connections>
                                 <action selector="cameraBTN:" destination="BYZ-38-t0r" id="G7s-FO-05H"/>
@@ -58,13 +63,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="4hO-KU-jDa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="95.380434782608702"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="auZ-e4-mba">
             <objects>
-                <viewController id="Ntg-jU-dmF" sceneMemberID="viewController">
+                <viewController id="Ntg-jU-dmF" customClass="HomeViewController" customModule="Object_Recognition_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FvX-iV-Ozm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,21 +136,50 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="TH4-pZ-t0I">
             <objects>
-                <viewController id="MuU-CI-ODg" sceneMemberID="viewController">
+                <viewController id="MuU-CI-ODg" customClass="ViewController2" customModule="Object_Recognition_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J5v-Q8-OpB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRQ-Tw-AVR">
+                                <rect key="frame" x="20" y="80" width="374" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu1-JA-VAT">
+                                <rect key="frame" x="20" y="568" width="374" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="q6A-Rd-OxY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6c2-WR-KD0"/>
+                    <navigationItem key="navigationItem" id="6c2-WR-KD0">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="xmark" catalog="system" id="9S3-4V-YOy">
+                            <connections>
+                                <segue destination="Xms-cO-beq" kind="unwind" unwindAction="unwindBookToWelcomeWithSegue:" id="2R5-eH-U9F"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="69N-Gz-LZW">
+                            <connections>
+                                <action selector="cameraBTN:" destination="MuU-CI-ODg" id="zb4-Sb-EJz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageSelect" destination="bRQ-Tw-AVR" id="wnO-5A-Kz7"/>
+                        <outlet property="prediction" destination="Yu1-JA-VAT" id="hVr-w5-0fk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mtd-iy-FRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Xms-cO-beq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="852"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="851.9021739130435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fqg-BL-Z2G">
@@ -166,4 +201,7 @@
             <point key="canvasLocation" x="132" y="852"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
