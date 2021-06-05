@@ -33,12 +33,39 @@ class ViewController2: UIViewController , UIImagePickerControllerDelegate , UINa
                     guard let ciimage = CIImage(image: userPickerImage) else {
                         fatalError("Failed to convert UI image to ciimage")
                     }
-            //Detect(image: ciimage)
+            Detect(image: ciimage)
         }
          imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    
+    func Detect(image:CIImage){
+        //recuperer le modele
+               guard   let model = try? VNCoreMLModel(for: MobileNetV2().model) else{
+                              fatalError("Core ML loading failed")
+                      }
+                       
+        //tester si la requette a reussi ou non
+                let request = VNCoreMLRequest(model: model ) {   (request, error ) in
+                    guard let results = request.results as? [VNClassificationObservation] else {
+                        fatalError("Core ML process failed")
+                    }
+                        
+                    //recuperer le premier resultat
+                    if let fisrtresult = results.first {
+                        self.prediction.text = fisrtresult.identifier
+                                  
+                    }
+                }
+                      
+                    //envoi d'une ou de plusieurs requettes sur l'image
+                      let handler = VNImageRequestHandler(ciImage: image)
+                         do {
+                             try handler.perform([request])
+                         } catch {
+                             print("Failed to perform classification.\n\(error.localizedDescription)")
+                         }
+                      
+    }
     
     @IBAction func cameraBTN(_ sender: Any) {
         imagePicker.modalPresentationStyle = .fullScreen
