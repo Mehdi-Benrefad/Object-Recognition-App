@@ -1,0 +1,20 @@
+PODS:
+  - AMPopTip (4.5.3)
+  - TransitionButton (0.5.3)
+
+DEPENDENCIES:
+  - AMPopTip
+  - TransitionButton
+
+SPEC REPOS:
+  trunk:
+    - AMPopTip
+    - TransitionButton
+
+SPEC CHECKSUMS:
+  AMPopTip: 77eef4793d50709bef83825b72da4f501263b91d
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
+
+PODFILE CHECKSUM: 7218224c144ae3697e8b0291f573f3c5dd6eb0f8
+
+COCOAPODS: 1.10.1
