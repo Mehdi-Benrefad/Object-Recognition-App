@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
     func initPopTip(popTip: PopTip , origin: UIButton){
         popTip.bubbleColor = UIColor.lightGray
         //popTip.borderWidth = 500
-        popTip.show(text: "Classification", direction: .up, maxWidth: 400, in: view, from: origin.frame)
+        popTip.show(text: "Classification", direction: .down, maxWidth: 400, in: view, from: origin.frame)
         popTip.shouldDismissOnTap = false
         popTip.tapHandler = { popTip in
             //print("\(popTip) tapped")
