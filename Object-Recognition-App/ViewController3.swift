@@ -56,7 +56,7 @@ class ViewController3: UIViewController  , UIImagePickerControllerDelegate , UIN
                    if let fisrtresult = results.first {
                     self.prediction.text = fisrtresult.identifier
                        
-                   }
+                   } 
                }
                
                 //envoi d'une ou de plusieurs requettes sur l'image
