@@ -140,6 +140,7 @@
                     <connections>
                         <outlet property="dominantObject" destination="ZL5-5k-qIP" id="9fy-Cw-lZ1"/>
                         <outlet property="isAComputer" destination="Jgt-gF-MxX" id="Hlp-az-elq"/>
+                        <outlet property="numberPrediction" destination="cqj-RT-82g" id="N0S-Ni-7e3"/>
                         <outlet property="objectName" destination="kzx-Nq-VI7" id="crb-Jd-jbp"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var isAComputer: UIButton!
     @IBOutlet weak var objectName: UIButton!
     @IBOutlet weak var dominantObject: UIButton!
+    @IBOutlet weak var numberPrediction: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class HomeViewController: UIViewController {
         
         let popTip3 = PopTip()
         initPopTip(popTip: popTip3, origin: dominantObject)
+        
+        let popTip4 = PopTip()
+        initPopTip(popTip: popTip4, origin: numberPrediction)
         
         // Do any additional setup after loading the view.
     }
