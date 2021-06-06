@@ -14,6 +14,7 @@ class ViewController4: UIViewController , UIImagePickerControllerDelegate , UINa
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var prediction: UILabel!
+    @IBOutlet weak var imageSelected: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +31,7 @@ class ViewController4: UIViewController , UIImagePickerControllerDelegate , UINa
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //on verifie si l'utilisateur a selectionne une image correctement
          if let userPickerImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                    //imageSelected.image = userPickerImage
+                    imageSelected.image = userPickerImage
                     guard let ciimage = CIImage(image: userPickerImage) else {
                         fatalError("Failed to convert UI image to ciimage")
                     }
