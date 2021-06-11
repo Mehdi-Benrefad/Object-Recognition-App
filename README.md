@@ -6,3 +6,11 @@
   -privacy camera usage Description + "message" (ex:This app need your permission)
   -privcy media libary usage + "message"  (ex: This app need your permission)<li>
  </ul>
+
+
+# Demo:
+
+
+
+https://user-images.githubusercontent.com/62174583/121622050-3256f780-ca65-11eb-9d60-1973495bece1.mp4
+
